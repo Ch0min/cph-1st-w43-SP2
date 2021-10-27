@@ -1,9 +1,9 @@
 public class Main {
 
     public static void main(String[] args) {
-        Bil benzin = new Benzinbil("BZ49710", "Mazda", "M2", 2010, 5, 95, 4);
+        Bil benzin = new Benzinbil("BZ49710", "Mazda", "M2", 2010, 5, 95, 19);
         Bil el = new Elbil("EL425622", "Tesla", "Model X", 2015, 5, 90, 250, 350);
-        Bil diesel = new Dieselbil("DS", "BMW", "320d", 2016, 5, true, 11);
+        Bil diesel = new Dieselbil("DS", "BMW", "320d", 2016, 5, true, 7);
 
         Garage myGarage = new Garage();
         System.out.println(myGarage);
