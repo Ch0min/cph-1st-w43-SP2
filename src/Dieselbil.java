@@ -26,31 +26,37 @@ public class Dieselbil extends Bil {
 
     @Override
     public String toString() {
-        return null;
+        return "Parkeret bil: " + mærke + " " + model + ", " + årgang + " -Dieselbil";
     }
 
     @Override
     public double beregnGrønEjerafgift() {
+        int sum;
         if (this.harPartikelfilter == true) {
-            System.out.println("Partikeludledningsafgift: 0kr.");
+            sum = 0;
+            System.out.println("Partikeludledningsafgift Diesel: " + sum + "kr.");
         } else if (this.harPartikelfilter == false) {
-            System.out.println("Partikeludledningsafgift: 1000kr.");
+            sum = 1000;
+            System.out.println("Partikeludledningsafgift Diesel: " + sum + "kr.");
         }
-
-        double dieselLiter = 0;
-        this.kmPrL = dieselLiter;
-        if (dieselLiter >= 20 && dieselLiter < 50) {
-            System.out.println("GrønEjerafgift Diesel: 330kr. & Udligningsafgiften: 130kr.");
-        } else if (dieselLiter >= 15 && dieselLiter < 20) {
-            System.out.println("GrønEjerafgift Diesel: 1050kr. & Udligningsafgiften: 1390kr.");
-        } else if (dieselLiter >= 10 && dieselLiter < 15) {
-            System.out.println("GrønEjerafgift Diesel: 2340kr. & Udligningsafgiften: 1850kr.");
-        } else if (dieselLiter >= 5 && dieselLiter < 10) {
-            System.out.println("GrønEjerafgift Diesel: 5500kr. & Udligningsafgiften: 2770kr.");
-        } else if (dieselLiter < 5) {
-            System.out.println("GrønEjerafgift Diesel: 10470kr. & Udligningsafgiften: 15260kr.");
+        int price = 0;
+        if (this.kmPrL >= 20 && this.kmPrL < 50) {
+            price = 330 + 130;
+            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
+        } else if (this.kmPrL >= 15 && this.kmPrL < 20) {
+            price = 1050 + 1390;
+            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
+        } else if (this.kmPrL >= 10 && this.kmPrL < 15) {
+            price = 2340 + 1850;
+            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
+        } else if (this.kmPrL >= 5 && this.kmPrL < 10) {
+            price = 5500 + 2770;
+            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
+        } else if (this.kmPrL < 5) {
+            price = 10470 + 15260;
+            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
         }
-        return dieselLiter;
+        return this.kmPrL;
     }
 }
 
@@ -59,8 +65,6 @@ public class Dieselbil extends Bil {
 //den 1390 kr, mellem 10 og 15 er den 1850kr, mellem 5 og 10 er den 2770kr, og under 5 er den
 //15260kr. Der er desuden en partikeludledningsafgift på 1000 kr hvis bilen ikke har partikelfilter
 //monteret.
-
-
 
 
 

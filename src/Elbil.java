@@ -36,23 +36,28 @@ public class Elbil extends Bil {
 
     @Override
     public String toString() {
-        return null;
+        return "Parkeret bil: " + mærke + " " + model + ", " + årgang + " -Elbil";
     }
 
     @Override
     public double beregnGrønEjerafgift() {
         this.whPrKm = 100 / (whPrKm / 91.25);
-
+        int price = 0;
         if (this.whPrKm >= 20 && this.whPrKm < 50) {
-            System.out.println("GrønEjerafgift El: 330kr.");
+            price = 330;
+            System.out.println("GrønEjerafgift El: " + price + "kr.");
         } else if (this.whPrKm >= 15 && this.whPrKm < 20) {
-            System.out.println("GrønEjerafgift El: 1050kr.");
+            price = 1050;
+            System.out.println("GrønEjerafgift El: " + price + "kr.");
         } else if (this.whPrKm >= 10 && this.whPrKm < 15) {
-            System.out.println("GrønEjerafgift El: 2340kr.");
+            price = 2340;
+            System.out.println("GrønEjerafgift El: " + price + "kr.");
         } else if (this.whPrKm >= 5 && this.whPrKm < 10) {
-            System.out.println("GrønEjerafgift El: 5500kr.");
+            price = 5500;
+            System.out.println("GrønEjerafgift El: " + price + "kr.");
         } else if (this.whPrKm < 5) {
-            System.out.println("GrønEjerafgift El: 10470kr");
+            price = 10470;
+            System.out.println("GrønEjerafgift El: " + price + "kr.");
         }
         return this.whPrKm;
     }

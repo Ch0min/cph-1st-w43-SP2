@@ -26,22 +26,28 @@ public class Benzinbil extends Bil {
 
     @Override
     public String toString() {
-        return null;
+        return "Parkeret bil: " + mærke + " " + model + ", " + årgang + " -Benzinbil";
 
     }
 
     @Override
     public double beregnGrønEjerafgift() {
+        int price = 0;
         if (this.kmPrL >= 20 && this.kmPrL < 50) {
-            System.out.println("GrønEjerafgift Benzin: 330kr.");
+            price = 330;
+            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
         } else if (this.kmPrL >= 15 && this.kmPrL < 20) {
-            System.out.println("GrønEjerafgift Benzin: 1050kr.");
+            price = 1050;
+            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
         } else if (this.kmPrL >= 10 && this.kmPrL < 15) {
-            System.out.println("GrønEjerafgift Benzin: 2340kr.");
+            price = 2340;
+            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
         } else if (this.kmPrL >= 5 && this.kmPrL < 10) {
-            System.out.println("GrønEjerafgift Benzin: 5500kr.");
+            price = 5500;
+            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
         } else if (this.kmPrL < 5) {
-            System.out.println("GrønEjerafgift Benzin: 10470kr");
+            price = 10470;
+            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
         }
         return this.kmPrL;
     }
