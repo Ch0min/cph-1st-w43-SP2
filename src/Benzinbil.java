@@ -31,11 +31,27 @@ public class Benzinbil extends Bil {
     }
 
     @Override
-    public double beregnGrønEfterafgift() {
-
-
-
-
-        return 0;
+    public double beregnGrønEjerafgift() {
+        if (this.kmPrL >= 20 && this.kmPrL < 50) {
+            System.out.println("GrønEjerafgift Benzin: 330kr.");
+        } else if (this.kmPrL >= 15 && this.kmPrL < 20) {
+            System.out.println("GrønEjerafgift Benzin: 1050kr.");
+        } else if (this.kmPrL >= 10 && this.kmPrL < 15) {
+            System.out.println("GrønEjerafgift Benzin: 2340kr.");
+        } else if (this.kmPrL >= 5 && this.kmPrL < 10) {
+            System.out.println("GrønEjerafgift Benzin: 5500kr.");
+        } else if (this.kmPrL < 5) {
+            System.out.println("GrønEjerafgift Benzin: 10470kr");
+        }
+        return this.kmPrL;
     }
 }
+
+
+
+
+
+
+
+
+

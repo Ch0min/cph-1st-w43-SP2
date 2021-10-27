@@ -40,7 +40,20 @@ public class Elbil extends Bil {
     }
 
     @Override
-    public double beregnGrønEfterafgift() {
-        return 0;
+    public double beregnGrønEjerafgift() {
+        this.whPrKm = 100 / (whPrKm / 91.25);
+
+        if (this.whPrKm >= 20 && this.whPrKm < 50) {
+            System.out.println("GrønEjerafgift El: 330kr.");
+        } else if (this.whPrKm >= 15 && this.whPrKm < 20) {
+            System.out.println("GrønEjerafgift El: 1050kr.");
+        } else if (this.whPrKm >= 10 && this.whPrKm < 15) {
+            System.out.println("GrønEjerafgift El: 2340kr.");
+        } else if (this.whPrKm >= 5 && this.whPrKm < 10) {
+            System.out.println("GrønEjerafgift El: 5500kr.");
+        } else if (this.whPrKm < 5) {
+            System.out.println("GrønEjerafgift El: 10470kr");
+        }
+        return this.whPrKm;
     }
 }
