@@ -43,22 +43,17 @@ public class Elbil extends Bil {
     public double beregnGrønEjerafgift() {
         this.whPrKm = 100 / (whPrKm / 91.25);
         int price = 0;
-        if (this.whPrKm >= 20 && this.whPrKm < 50) {
+        if (this.whPrKm >= 20 && whPrKm < 50) {
             price = 330;
-            System.out.println("GrønEjerafgift El: " + price + "kr.");
-        } else if (this.whPrKm >= 15 && this.whPrKm < 20) {
+        } else if (whPrKm >= 15 && whPrKm < 20) {
             price = 1050;
-            System.out.println("GrønEjerafgift El: " + price + "kr.");
-        } else if (this.whPrKm >= 10 && this.whPrKm < 15) {
+        } else if (whPrKm >= 10 && whPrKm < 15) {
             price = 2340;
-            System.out.println("GrønEjerafgift El: " + price + "kr.");
-        } else if (this.whPrKm >= 5 && this.whPrKm < 10) {
+        } else if (whPrKm >= 5 && whPrKm < 10) {
             price = 5500;
-            System.out.println("GrønEjerafgift El: " + price + "kr.");
-        } else if (this.whPrKm < 5) {
+        } else if (whPrKm < 5) {
             price = 10470;
-            System.out.println("GrønEjerafgift El: " + price + "kr.");
         }
-        return this.whPrKm;
+        return price;
     }
 }

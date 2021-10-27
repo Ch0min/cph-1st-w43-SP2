@@ -32,31 +32,27 @@ public class Dieselbil extends Bil {
     @Override
     public double beregnGrønEjerafgift() {
         int sum;
-        if (this.harPartikelfilter == true) {
+        if (harPartikelfilter == true) {
             sum = 0;
             System.out.println("Partikeludledningsafgift Diesel: " + sum + "kr.");
-        } else if (this.harPartikelfilter == false) {
+        } else if (harPartikelfilter == false) {
             sum = 1000;
             System.out.println("Partikeludledningsafgift Diesel: " + sum + "kr.");
         }
+
         int price = 0;
-        if (this.kmPrL >= 20 && this.kmPrL < 50) {
+        if (kmPrL >= 20 && kmPrL < 50) {
             price = 330 + 130;
-            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
-        } else if (this.kmPrL >= 15 && this.kmPrL < 20) {
+        } else if (kmPrL >= 15 && kmPrL < 20) {
             price = 1050 + 1390;
-            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
-        } else if (this.kmPrL >= 10 && this.kmPrL < 15) {
+        } else if (kmPrL >= 10 && kmPrL < 15) {
             price = 2340 + 1850;
-            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
-        } else if (this.kmPrL >= 5 && this.kmPrL < 10) {
+        } else if (kmPrL >= 5 && kmPrL < 10) {
             price = 5500 + 2770;
-            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
-        } else if (this.kmPrL < 5) {
+        } else if (kmPrL < 5) {
             price = 10470 + 15260;
-            System.out.println("GrønEjerafgift og Udligningsafgift Diesel: " + price + "kr.");
         }
-        return this.kmPrL;
+        return price;
     }
 }
 

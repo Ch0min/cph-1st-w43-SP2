@@ -33,23 +33,18 @@ public class Benzinbil extends Bil {
     @Override
     public double beregnGrønEjerafgift() {
         int price = 0;
-        if (this.kmPrL >= 20 && this.kmPrL < 50) {
+        if (kmPrL >= 20 && kmPrL < 50) {
             price = 330;
-            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
-        } else if (this.kmPrL >= 15 && this.kmPrL < 20) {
+        } else if (kmPrL >= 15 && kmPrL < 20) {
             price = 1050;
-            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
-        } else if (this.kmPrL >= 10 && this.kmPrL < 15) {
+        } else if (kmPrL >= 10 && kmPrL < 15) {
             price = 2340;
-            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
-        } else if (this.kmPrL >= 5 && this.kmPrL < 10) {
+        } else if (kmPrL >= 5 && kmPrL < 10) {
             price = 5500;
-            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
-        } else if (this.kmPrL < 5) {
+        } else if (kmPrL < 5) {
             price = 10470;
-            System.out.println("GrønEjerafgift Benzin: " + price + "kr.");
         }
-        return this.kmPrL;
+        return price;
     }
 }
 
