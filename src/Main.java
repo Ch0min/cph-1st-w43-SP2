@@ -18,3 +18,8 @@ public class Main {
         myGarage.beregnGrønAfgiftForBilpark();
     }
 }
+
+/* Skriv en main-metode der instantierer et Garage-objekt og et antal bil-objekter af de 3 forskellige subtyper
+af Bil. Tilføj bilerne til garagen. Skriv alle bilerne ud, og kald også beregnGrønAfgiftForBilpark-metoden og
+skriv resultatet ud.
+ */

@@ -57,3 +57,7 @@ public class Elbil extends Bil {
         return price;
     }
 }
+
+/* 2. For en Elbil gælder de samme regler som for benzinbilen, blot skal man først omregne whPrKm til
+kmPrL. Det udregnes således: 100 / (whPrKm / 91,25). Se evt. formlen her: https://fdm.dk/alt-ombiler/dine-rettigheder/boderafgifter/ejerafgift-elbil.
+ */
