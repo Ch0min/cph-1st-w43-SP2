@@ -53,9 +53,8 @@ public abstract class Bil {
         this.antalDøre = antalDøre;
     }
 
-    public abstract double beregnGrønEfterafgift() {
+    public abstract double beregnGrønEfterafgift();
 
-    }
 }
 
 

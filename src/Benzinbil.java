@@ -32,7 +32,7 @@ public class Benzinbil extends Bil {
 
     @Override
     public double beregnGrønEfterafgift() {
-        
+
 
 
 
